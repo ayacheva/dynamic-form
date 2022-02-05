@@ -76,8 +76,7 @@ const inputFormSubmitHandler = (e, outputForm) => {
     const outputFieldset = outputForm.querySelector('fieldset[data-id='+outputFormId+'-fieldset]');
     let fieldValue = e.target.querySelector('select').value;
     if(fieldValue !== '0') {
-        let newInput = createInput(fieldValue);
-        drawItems(outputFieldset, newInput);
+        drawItems(outputFieldset, createInput(fieldValue))
     }
 }
 
