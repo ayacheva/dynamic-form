@@ -84,7 +84,7 @@ const outputFormSubmitHanlder = (_, outputForm) => {
     json = [];
     const inputs = outputForm.querySelectorAll('input');
     if(inputs.length !== 0) {
-        [...inputs].forEach(x => {
+        inputs.forEach(x => {
             json.push({"name": x.name, "value": x.value})
         });
         console.log(JSON.stringify(json));
